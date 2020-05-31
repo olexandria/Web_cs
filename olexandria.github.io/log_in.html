@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SpaceBook</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet"  href="css/style.css">
+<link rel="icon" href="image/favicon.ico">
+</head>
+<body>
+	<!-- Navigation bar on large screens -->
+	<div class="w3-top w3-card myNavbar">
+		<div class="w3-bar" id="myNavbar">
+			<img class="padding_left w3-left w3-hide-medium w3-hide-small" src="image/ico.png" style="width:32%" ></img>
+				<div class="padding_top">
+					<a href="index.html" class="active w3-bar-item w3-hide-medium w3-hide-small">HOME</a>
+					<a href="#book" class="w3-bar-item w3-hide-medium w3-hide-small">BOOK</a>
+					<a href="#author" class="w3-bar-item w3-hide-medium w3-hide-small">AUTHOR</a>
+					<a href="#genre" class="w3-bar-item w3-hide-medium w3-hide-small">GENRE</a>
+					<a href="#contact" class="w3-bar-item w3-hide-medium w3-hide-small">CONTACT US</a>
+						<div id="myBorder1">
+							<a href="log_in.html" class="w3-right w3-hide-medium w3-hide-small">
+							<i class="myIcon fa fa-sign-in" style="font-size:16px"></i></a>
+						<div id="myBorder2">
+							<a href="sign_up.html" class="w3-right w3-hide-medium w3-hide-small">
+							<i class="myIcon fa fa-user-plus" style="font-size:16px"></i></a>
+						</div>
+					</div>
+				</div>
+		</div>
+	</div>
+	<!-- Navigation bar on medium and small screens -->
+	<div class="w3-top myNavbar w3-bar w3-card w3-hide-large">
+		<a class="w3-bar-item w3-button w3-hover-black w3-hide-large w3-center-left" href="javascript:void(0);" onclick="toggleFunction()">
+		<i class="fa fa-bars"></i></a>
+		<img src="image/ico.png" style="width:80px" ></img>
+		<a href="log_in.html" class="w3-bar-item w3-right w3-hide-large"><i class="fa fa-sign-in" style="font-size:20px"></i></a>
+		<a href="sign_up.html" class="w3-bar-item w3-right w3-hide-large"><i class="fa fa-user-plus" style="font-size:16px"></i></a>
+	</div>
+	<div id="navDemo" class="w3-card w3-bar-block w3-hide w3-hide-large ">
+	    <a href="index.html" class="w3-bar-item">HOME</a>
+		<a href="#book" class="w3-bar-item">BOOK</a>
+		<a href="#author" class="w3-bar-item">AUTHOR</a>
+		<a href="#genre" class="w3-bar-item">GENRE</a>
+		<a href="#contact" class="w3-bar-item">CONTACT US</a>
+	</div>
+	<!-- Authorization Form -->
+	<form class="form_autorizate">
+		<h1>Authorization Form</h1>
+		<div class="input-container">
+			<input class="input-field" type="text" placeholder="Email"></input>
+		</div>
+		<div class="input-container">
+			<input class="input-field" type="password" placeholder="Password"></input>
+		</div>
+		<button class="myBtn3"><p>Authorize</p></button>
+	</form>
+	<!-- Footer -->
+	<footer id="myFooter">
+        <div class="w3-hide-small">
+			<div class="w3-content">
+			    <div class="w3-row margin">
+					<div class="w3-col m3 l3">
+						<div class="container">
+							<div>
+								<a href="#book"><h6>BOOK</h6></a>
+							</div>
+						<div>
+							<a href="#author"><h6>AUTHOR</h6></a>
+						</div>
+						<div>
+							<a href="#genre"><h6>GENRE</h6></a>
+						</div>
+					</div>
+					</div>
+					<div class="w3-col m3 l3">
+						<div class="container">
+							<p>+380962770798</p>
+							<p>Consultation</p>
+						</div>
+					</div>
+					<div class="w3-col m3 l3">
+						<div class="container">
+							<p>Book@gmail.com</p>
+							<p>E-Mail</p>
+						</div>
+					</div>
+					<div class="w3-col m3 l3">
+						<div class="container">
+							<p>Privacy policy</p>
+							<p>© SpaceBook</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div class="w3-hide-medium w3-hide-large">
+		<footer id="footer">
+			<div class="w3-content w3-center">
+				<div class="w3-row margin">
+					<div class="w3-col l3">
+						<div class="container">
+							<p>+380962770798</p>
+							<p>Consultation</p>
+							<div class="line"></div>
+						</div>
+					</div>
+					<div class="w3-col l3">
+						<div class="container">
+							<p>Book@gmail.com</p>
+							<p>E-Mail</p>
+							<div class="line"></div>
+						</div>
+					</div>
+					<div class="w3-col l3">
+						<div class="container">
+							<p>Privacy policy</p>
+							<p>© SpaceBook</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+<script src="Script/Script.js"></script>
+</body>
+</html>
