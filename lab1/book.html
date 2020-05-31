@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<title>SpaceBook</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="image/favicon.ico">
+<link rel="stylesheet"  href="css/style.css">
+<body>
+<!-- Navigation bar on large screens -->
+	<div class="w3-top w3-card myNavbar w3-hide-small w3-hide-medium">
+		<div class="w3-bar">
+			<img class="padding_left w3-left" src="image/ico.png" style="width:32%" ></img>
+				<div class="padding_top">
+					<a href="index.html" class="active w3-bar-item">HOME</a>
+					<a href="books.html" class="w3-bar-item">BOOK</a>
+					<a href="#contact" class="w3-bar-item">CONTACT US</a>
+						<div id="myBorder1">
+							<a href="log_in.html" class="w3-right">
+							<i class="myIcon fa fa-sign-in" style="font-size:16px"></i></a>
+						<div id="myBorder2">
+							<a href="sign_up.html" class="w3-right">
+							<i class="myIcon fa fa-user-plus" style="font-size:16px"></i></a>
+						</div>
+					</div>
+				</div>
+		</div>
+	</div>
+	<!-- Navigation bar on medium and small screens -->
+	<div class="w3-top myNavbar w3-bar w3-card w3-hide-large">
+		<a class="w3-bar-item w3-button w3-hover-black w3-hide-large w3-center-left" href="javascript:void(0);" onclick="toggleFunction()">
+		<i class="fa fa-bars"></i></a>
+		<img src="image/ico.png" style="width:80px" ></img>
+		<a href="log_in.html" class="w3-bar-item w3-right w3-hide-large"><i class="fa fa-sign-in" style="font-size:20px"></i></a>
+		<a href="sign_up.html" class="w3-bar-item w3-right w3-hide-large"><i class="fa fa-user-plus" style="font-size:16px"></i></a>
+	</div>
+	<div id="nav" class="w3-card w3-bar-block w3-hide w3-hide-large ">
+	    <a href="index.html" class="w3-bar-item">HOME</a>
+		<a href="books.html" class="w3-bar-item">BOOK</a>
+		<a href="#contact" class="w3-bar-item">CONTACT US</a>
+	</div>
+		<!-- Book page on large screen -->
+		<div class='w3-hide-small w3-hide-medium'>
+		<div class="flex-container_single">
+		<div style="flex-grow: 3">
+		<div>
+			<img class="w3-image" src="image/book7.png" style="width:220px; height:305px"></img>
+			</div>
+			</div>
+			<div style="flex-grow: 8">
+			<h1>A Tale of Two Cities</h1>
+			<p>A Tale of Two Cities deals with the major themes of duality, revolution, and resurrection. 
+			It it was the worst of times in London and Paris, 
+			as economic and political unrest lead to the American and French Revolutions.</p>
+							<div class='line'></div>
+							<div class='text_padding' >
+							<p> Author:<span >Charles Dickens</span></p>
+							<p> Genre:<span>historical fiction</span></p>
+							<p> Publishing house:<span>Chapman & Hall</span></p>
+							<button class="myBtn">READ </button>
+							<button class="myBtn4">ADD TO LIBRARY</button>
+			</div></div>
+			</div>
+			<div class='information_padding'>
+			<div><button onclick="Information()" class="myBtn">MORE INFORMATION</button>
+
+                           <div id="myDIV" >
+						   <h2>Genre:</h2>
+							 <h5> Historical fiction:<span>genre that reconstructs past events in fictional stories.
+							 Common characteristics of this writing genre are the inclusion of historical 
+							 events or historical people </span></h5>
+							 <h2>Author:</h2>
+							 <h5> Nickname:<span>the Inimitable </span></h5>
+							 <h5> Date:<span>7 February 1812 - 9 June 1870</span></h5>
+							 <h5> Country:<span>England </span></h5>
+							 <h2>Publishing house:</h2>
+							 <h5> Address:<span>6100 Lake Forrest Dr STE 120, Atlanta, GA 30328, US </span></h5>
+							 <h5> Email:<span>acham.zawde@gmail.com </span></h5>
+							 <h2>Book:</h2>
+                             <h5> Pages:<span >341</span></h5>
+							 <h5> Year:<span>1859 </span></h5>
+                              </div></div>
+			<h4 class='comment_padding'>Say something about the book</h4>
+			<input class="input-field_comment" type="text" placeholder="Comment"></input>
+			<button class="myBtn5">Add</button><button class="myBtn5">Delete</button>
+			<div>
+			<div class="flex-container_comment">
+				<div style="flex-grow: 0">
+					<img class="w3-image" src="image/person1.jpg" style="width:80px; height:70px"></img>
+						</div>
+						<div style="flex-grow: 10">
+			<p class='w3-right'>06.04.2020</p><h4>IRYNA DOSIAK</h4>
+			<p>I really liked it. Very interesting and informative book. I recommend it!</p>
+			</div></div>
+			<div class="flex-container_comment">
+				<div style="flex-grow: 0">
+					<img class="w3-image" src="image/person2.png" style="width:80px; height:70px"></img>
+						</div>
+						<div style="flex-grow: 10">
+			<p class='w3-right'>02.03.2020</p><h4>JOE BLACK</h4>
+			<p>It rarely happens that a quote from a book haunts me but this one, well, this one does. 
+			I finished A Tale of Two Cities about two weeks ago, but I am still not over the ending. 
+			This is one of those rare books that keep you 
+			thinking even after you finished the last page and already closed the cover of the book.</p>
+			</div></div>
+			</div>
+			</div>
+		</div>
+		<!-- Book page on large screen -->
+		<div class='w3-hide-large'>
+		<div class='w3-center'>
+			<img class="comment_padding w3-image" src="image/book7.png" style="width:220px; height:305px"></img>
+			<div><button onclick="Details()" class="myBtn">MORE INFORMATION</button></div>
+        </div>
+                           <div id="myDIV_small" >
+						   <h2 class='w3-center'>Genre:</h2>
+							 <h5> Historical fiction:<span>genre that reconstructs past events in fictional stories.
+							 Common characteristics of this writing genre are the inclusion of historical 
+							 events or historical people </span></h5>
+							 <h2 class='w3-center'>Author:</h2>
+							 <h5> Nickname:<span>the Inimitable </span></h5>
+							 <h5> Date:<span>7 February 1812 - 9 June 1870</span></h5>
+							 <h5> Country:<span>England </span></h5>
+							 <h2 class='w3-center'>Publishing house:</h2>
+							 <h5> Address:<span>6100 Lake Forrest Dr STE 120, Atlanta, GA 30328, US </span></h5>
+							 <h5> Email:<span>acham.zawde@gmail.com </span></h5>
+							 <h2 class='w3-center'>Book:</h2>
+                             <h5> Pages:<span >341</span></h5>
+							 <h5> Year:<span>1859 </span></h5>
+                              </div>
+			<div class='margin_onsmall'>
+			<h1 class='w3-center'>A Tale of Two Cities</h1>
+			<p>A Tale of Two Cities deals with the major themes of duality, revolution, and resurrection. 
+			It it was the worst of times in London and Paris, 
+			as economic and political unrest lead to the American and French Revolutions.</p>
+							<div class='line'></div>
+							<div class='text_padding' >
+							<p> Author:<span >Charles Dickens</span></p>
+							<p> Genre:<span>historical fiction</span></p>
+							<p> Publishing house:<span>Chapman & Hall</span></p>
+							<div class='w3-center'>
+							<button class="myBtn">READ </button>
+							<button class="myBtn4">ADD TO LIBRARY</button></div>
+			</div>
+			<div class='w3-center'>
+			<h4 class='comment_padding'>Say something about the book</h4>
+			<input class="input-field_comment" type="text" placeholder="Comment"></input>
+			<button class="myBtn5">Add</button><button class="myBtn5">Delete</button>
+			</div>
+			<div>
+			<div class="flex-container_comment">
+				<div style="flex-grow: 0">
+					<img class="w3-image" src="image/person1.jpg" style="width:80px; height:70px"></img>
+						</div>
+						<div style="flex-grow: 10">
+			<p class='w3-right'>06.04.2020</p><h4>IRYNA DOSIAK</h4>
+			<p>I really liked it. Very interesting and informative book. I recommend it!</p>
+			</div></div>
+			<div class="flex-container_comment">
+				<div style="flex-grow: 0">
+					<img class="w3-image" src="image/person2.png" style="width:80px; height:70px"></img>
+						</div>
+						<div style="flex-grow: 10">
+			<p class='w3-right'>02.03.2020</p><h4>JOE BLACK</h4>
+			<p>It rarely happens that a quote from a book haunts me but this one, well, this one does. 
+			I finished A Tale of Two Cities about two weeks ago, but I am still not over the ending. 
+			This is one of those rare books that keep you 
+			thinking even after you finished the last page and already closed the cover of the book.</p>
+			</div></div>
+			</div></div>	
+		</div>			
+	<!-- Footer -->
+	<footer id="footer">
+		<div id="contact" >
+			<div class="w3-content w3-hide-medium w3-hide-small">
+				<div class="w3-row margin">
+					<div class="w3-col l3">
+						<div class="container">
+							<div>
+								<a href="#book"><h6>BOOK</h6></a>
+							</div>
+						<div>
+							<a href="#author"><h6>AUTHOR</h6></a>
+						</div>
+						<div>
+							<a href="#genre"><h6>GENRE</h6></a>
+						</div>
+					</div>
+				</div>
+				<div class="w3-col l3">
+					<div class="container">
+						<p>+380962770798</p>
+						<p>Consultation</p>
+					</div>
+				</div>
+				<div class="w3-col l3">
+					<div class="container">
+						<p>Book@gmail.com</p>
+						<p>E-Mail</p>
+					</div>
+				</div>
+				<div class="w3-col l3">
+					<div class="container">
+						<p>Privacy policy</p>
+						<p>© SpaceBook</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="w3-content w3-center w3-hide-large">
+			<div class="w3-row margin">
+				<div class="w3-col l3">
+					<div class="container">
+						<p>+380962770798</p>
+						<p>Consultation</p>
+						<div class="line"></div>
+					</div>
+				</div>
+				<div class="w3-col l3">
+					<div class="container">
+						<p>Book@gmail.com</p>
+						<p>E-Mail</p>
+						<div class="line"></div>
+					</div>
+				</div>
+				<div class="w3-col l3">
+					<div class="container">
+						<p>Privacy policy</p>
+						<p>© SpaceBook</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<script src="Script/Script.js"></script>
+</body>
+</html>

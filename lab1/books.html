@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<title>SpaceBook</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="image/favicon.ico">
+<link rel="stylesheet"  href="css/style.css">
+<body>
+<!-- Navigation bar on large screens -->
+	<div class="w3-top w3-card myNavbar w3-hide-medium w3-hide-small">
+		<div class="w3-bar">
+			<img class="padding_left w3-left" src="image/ico.png" style="width:32%" ></img>
+				<div class="padding_top">
+					<a href="index.html" class="active w3-bar-item">HOME</a>
+					<a href="books.html" class="w3-bar-item">BOOK</a>
+					<a href="#contact" class="w3-bar-item">CONTACT US</a>
+						<div id="myBorder1">
+							<a href="log_in.html" class="w3-right">
+							<i class="myIcon fa fa-sign-in" style="font-size:16px"></i></a>
+						<div id="myBorder2">
+							<a href="sign_up.html" class="w3-right">
+							<i class="myIcon fa fa-user-plus" style="font-size:16px"></i></a>
+						</div>
+					</div>
+				</div>
+		</div>
+	</div>
+	<!-- Navigation bar on medium and small screens -->
+	<div class="w3-top myNavbar w3-bar w3-card w3-hide-large">
+		<a class="w3-bar-item w3-button w3-hover-black w3-hide-large w3-center-left" href="javascript:void(0);" onclick="toggleFunction()">
+		<i class="fa fa-bars"></i></a>
+		<img src="image/ico.png" style="width:80px" ></img>
+		<a href="log_in.html" class="w3-bar-item w3-right w3-hide-large"><i class="fa fa-sign-in" style="font-size:20px"></i></a>
+		<a href="sign_up.html" class="w3-bar-item w3-right w3-hide-large"><i class="fa fa-user-plus" style="font-size:16px"></i></a>
+	</div>
+	<div id="nav" class="w3-card w3-bar-block w3-hide w3-hide-large ">
+	    <a href="index.html" class="w3-bar-item">HOME</a>
+		<a href="books.html" class="w3-bar-item">BOOK</a>
+		<a href="#contact" class="w3-bar-item">CONTACT US</a>
+	</div>
+	<!-- Book page on large screen -->
+	<div class="flex-container w3-hide-small w3-hide-medium">
+		<div style="flex-grow: 1.3" class='w3-padding-24'>
+			<h3>Genre</h3>
+				<div class='line'></div>
+					<ul class="b" id="Genre">
+						<li><a href="#">Adventure</a></li>
+						<li><a href="#">Fantasy</a></li>
+						<li><a href="#">Historical fiction</a></li>
+						<li><a href="#">Horror</a></li>
+						<li><a href="#">Mystery</a></li>
+						<li><a href="#">Romance</a></li>
+						<li><a href="#">Science fiction</a></li>
+						<li><a href="#">Dystopia</a></li>
+						<li><a href="#">Utopia</a></li>
+						<li><a href="#">Detective</a></li>
+						<li><a href="#">Thrillers</a></li>
+						<li><a href="#">Biographies</a></li>
+					</ul>
+						<div class="search-container">
+								<div class="input">
+									<input type="text" id="myInput_genre" onkeyup="Search_genre()" class="input-search" placeholder="Search.." title="Type in a name">
+										<form><a class='color_search'>
+												<i class="fa fa-search"></a></i>
+										</form>
+									</input>
+								</div>
+						</div>
+			<h3 class='padding_author'>Author</h3>
+				<div class='line'></div>
+					<ul class="b" id="Author">
+						<li><a href="#">William Shakespeare</a></li>
+						<li><a href="#">Agatha Christie</a></li>
+						<li><a href="#">Leo Tolstoy</a></li>
+						<li><a href="#">Stephen King</a></li>
+						<li><a href="#">Tolkien</a></li>
+						<li><a href="#">Jackie Collins</a></li>
+						<li><a href="#">Dante Alighieri</a></li>
+						<li><a href="#">Aldous Huxley</a></li>
+						<li><a href="#">George Orwell</a></li>
+					</ul>
+						<div class="search-container">
+								<div class="input">
+									<input type="text" id="myInput_author" onkeyup="Search_author()" class="input-search" placeholder="Search..">
+										<form><a class='color_search'>	
+											<i class="fa fa-search"></a></i>
+										</form>
+									</input>
+								</div>
+						</div>
+		</div>
+			<div style="flex-grow: 8">
+				<div class="w3-content padding_book">
+					<h3>Choose a book to read:</h3>
+						<div class="w3-row w3-center">
+							<div class="w3-col s8 m4 l4 books">
+								<div class="container">
+									<img src="image/book1.png" class="image" style="width:120px; height:180px" alt="The Peter Rabbit">
+										<div class="middle ">
+											<button onclick="location.href = 'book.html';" class="myBtn1">View</button>
+										</div>
+									<h4>The Peter Rabbit</h4>
+								</div>
+							</div>
+							<div class="w3-col s8 m4 l4 books">
+								<div class="container">
+									<img src="image/book2.png" class="image" style="width:120px; height:180px" alt="C.Dickens Major Works">
+										<div class="middle ">
+											<button onclick="location.href = 'book.html';" class="myBtn1">View</button>
+										</div>
+									<h4>C.Dickens Major Works</h4>
+								</div>
+							</div>
+							<div class="w3-col s8 m4 l4 books">
+								<div class="container">
+									<img src="image/book3.png" class="image" style="width:120px; height:180px" alt="Nancy Drew Starter Set">
+										<div class="middle ">
+											<button onclick="location.href = 'book.html';" class="myBtn1">View</button>
+										</div>
+									<h4>Nancy Drew Starter Set</h4>
+								</div>
+							</div>
+							<div class="w3-col s8 m4 l4 books">
+								<div class="container">
+									<img src="image/book4.png" class="image" style="width:120px; height:180px" alt="Nancy Drew Starter Set">
+										<div class="middle ">
+											<button onclick="location.href = 'book.html';" class="myBtn1">View</button>
+										</div>
+									<h4>The Bungalow Mystery</h4>
+								</div>
+							</div>
+							<div class="w3-col s8 m4 l4 books">
+								<div class="container">
+									<img src="image/book5.png" class="image" style="width:120px; height:180px" alt="C.Dickens Major Works">
+										<div class="middle ">
+											<button onclick="location.href = 'book.html';" class="myBtn1">View</button>
+										</div>
+									<h4>Diana Gabaldon Anthology</h4>
+								</div>
+							</div>
+							<div class="w3-col s8 m4 l4 books">
+								<div class="container">
+									<img src="image/book6.png" class="image" style="width:120px; height:180px" alt="C.Dickens Major Works">
+										<div class="middle ">
+											<button onclick="location.href = 'book.html';" class="myBtn1">View</button>
+										</div>
+									<h4>Outlander</h4>
+								</div>
+							</div>
+							<div class="w3-col s8 m4 l4 books">
+								<div class="container">
+									<img src="image/book7.png" class="image" style="width:120px; height:180px" alt="C.Dickens Major Works">
+										<div class="middle ">
+											<button onclick="location.href = 'book.html';" class="myBtn1">View</button>
+										</div>
+									<h4>A Tale of Two Cities</h4>
+								</div>
+							</div>
+							<div class="w3-col s8 m4 l4 books">
+								<div class="container">
+									<img src="image/book8.jpg" class="image" style="width:120px; height:180px" alt="City of Girls">
+										<div class="middle ">
+											<button onclick="location.href = 'book.html';" class="myBtn1">View</button>
+										</div>
+									<h4>City of Girls</h4>
+								</div>
+							</div>
+							<div class="w3-col s8 m4 l4 books">
+								<div class="container">
+									<img src="image/book9.png" class="image" style="width:120px; height:180px" alt="C.Dickens Major Works">
+										<div class="middle ">
+											<button onclick="location.href = 'book.html';" class="myBtn1">View</button>
+										</div>
+									<h4>Dragonfly in Amber</h4>
+								</div>
+							</div>
+						</div>
+				</div>
+			</div>
+	</div>
+	<!-- Book page on small screen -->
+	<div class='w3-hide-large'>
+		<div class='w3-padding-24 small'>
+			<h3>Genre</h3>
+				<div class='line'></div>
+					<ul class="b_small" id="Genre_small">
+						<li><a href="#">Adventure</a></li>
+						<li><a href="#">Fantasy</a></li>
+						<li><a href="#">Historical fiction</a></li>
+					</ul>
+					<div class="search-container">
+								<div class="input">
+									<input type="text" id="myInput_genre_small" onkeyup="Search_genre_small()" class="input-search" placeholder="Search..">
+										<form><a class='color_search'>	
+											<i class="fa fa-search"></a></i>
+										</form>
+									</input>
+								</div>
+						</div>
+			<h3 class='small_padding'>Author</h3>
+				<div class='line'></div>
+					<ul class="b_small" id="Author_small">
+						<li><a href="#">William Shakespeare</a></li>
+						<li><a href="#">Agatha Christie</a></li>
+						<li><a href="#">Leo Tolstoy</a></li>
+					</ul>
+					<div class="search-container">
+								<div class="input">
+									<input type="text" id="myInput_author_small" onkeyup="Search_author_small()" class="input-search" placeholder="Search..">
+										<form><a class='color_search'>	
+											<i class="fa fa-search"></a></i>
+										</form>
+									</input>
+								</div>
+					</div>
+      </div>
+		<div class="w3-content ">
+			<h3 class="w3-center small_padding">Choose a book to read:</h3>
+			<div class="w3-row w3-center margin">
+				<div class="w3-col s4 m4 small_book">
+					<div class="container">
+						<img src="image/book1.png" class="image" style="width:80px; height:120px" alt="The Peter Rabbit">
+							<div class="middle ">
+								<button onclick="location.href = 'book.html';" class="myBtn1">View</button>
+							</div>
+						<h6>The Peter Rabbit</h6>
+					</div>
+				</div>
+				<div class="w3-col s4 m4 small_book">
+					<div class="container">
+						<img src="image/book2.png" class="image" style="width:80px; height:120px" alt="C.Dickens Major Works">
+							<div class="middle ">
+								<button onclick="location.href = 'book.html';" class="myBtn1">View</button>
+							</div>
+						<h6>C.Dickens Major Works</h6>
+					</div>
+				</div>
+				<div class="w3-col s4 m4 small_book">
+					<div class="container">
+						<img src="image/book3.png" class="image" style="width:80px; height:120px" alt="Nancy Drew Starter Set">
+							<div class="middle ">
+								<button onclick="location.href = 'book.html';" class="myBtn1">View</button>
+							</div>
+						<h6>Nancy Drew Starter Set</h6>
+					</div>
+				</div>
+				<div class="w3-col s4 m4 small_book">
+					<div class="container">
+						<img src="image/book4.png" class="image" style="width:80px; height:120px" alt="Nancy Drew Starter Set">
+							<div class="middle ">
+								<button onclick="location.href = 'book.html';" class="myBtn1">View</button>
+							</div>
+						<h6>The Bungalow Mystery</h6>
+					</div>
+				</div>
+				<div class="w3-col s4 m4 small_book">
+					<div class="container">
+						<img src="image/book5.png" class="image" style="width:80px; height:120px" alt="C.Dickens Major Works">
+							<div class="middle ">
+								<button onclick="location.href = 'book.html';" class="myBtn1">View</button>
+							</div>
+						<h6>Diana Gabaldon Anthology</h6>
+					</div>
+				</div>
+				<div class="w3-col s4 m4 small_book">
+					<div class="container">
+						<img src="image/book6.png" class="image" style="width:80px; height:120px" alt="C.Dickens Major Works">
+							<div class="middle ">
+								<button onclick="location.href = 'book.html';" class="myBtn1">View</button>
+							</div>
+						<h6>Outlander</h6>
+					</div>
+				</div>
+				<div class="w3-col s4 m4 small_book">
+					<div class="container">
+						<img src="image/book7.png" class="image" style="width:80px; height:120px" alt="C.Dickens Major Works">
+							<div class="middle ">
+								<button onclick="location.href = 'book.html';" class="myBtn1">View</button>
+							</div>
+						<h6>A Tale of Two Cities</h6>
+					</div>
+				</div>
+				<div class="w3-col s4 m4 small_book">
+					<div class="container">
+						<img src="image/book8.jpg" class="image" style="width:80px; height:120px" alt="C.Dickens Major Works">
+							<div class="middle ">
+								<button onclick="location.href = 'book.html';" class="myBtn1">View</button>
+							</div>
+						<h6>Nora Roberts Trilogy</h6>
+					</div>
+				</div>
+				<div class="w3-col s4 m4 small_book">
+					<div class="container">
+						<img src="image/book9.png" class="image" style="width:80px; height:120px" alt="C.Dickens Major Works">
+							<div class="middle ">
+								<button onclick="location.href = 'book.html';" class="myBtn1">View</button>
+							</div>
+						<h6>Dragonfly in Amber</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer id="footer">
+		<div id="contact" >
+			<div class="w3-content w3-hide-medium w3-hide-small">
+				<div class="w3-row margin">
+					<div class="w3-col l3">
+						<div class="container">
+							<div>
+								<a href="#book"><h6>BOOK</h6></a>
+							</div>
+						<div>
+							<a href="#author"><h6>AUTHOR</h6></a>
+						</div>
+						<div>
+							<a href="#genre"><h6>GENRE</h6></a>
+						</div>
+					</div>
+				</div>
+				<div class="w3-col l3">
+					<div class="container">
+						<p>+380962770798</p>
+						<p>Consultation</p>
+					</div>
+				</div>
+				<div class="w3-col l3">
+					<div class="container">
+						<p>Book@gmail.com</p>
+						<p>E-Mail</p>
+					</div>
+				</div>
+				<div class="w3-col l3">
+					<div class="container">
+						<p>Privacy policy</p>
+						<p>© SpaceBook</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="w3-content w3-center w3-hide-large">
+			<div class="w3-row margin">
+				<div class="w3-col l3">
+					<div class="container">
+						<p>+380962770798</p>
+						<p>Consultation</p>
+						<div class="line"></div>
+					</div>
+				</div>
+				<div class="w3-col l3">
+					<div class="container">
+						<p>Book@gmail.com</p>
+						<p>E-Mail</p>
+						<div class="line"></div>
+					</div>
+				</div>
+				<div class="w3-col l3">
+					<div class="container">
+						<p>Privacy policy</p>
+						<p>© SpaceBook</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+<script src="Script/Script.js"></script>
+</body>
+</html>
