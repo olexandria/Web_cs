@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<title>SpaceBook</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="{% static 'image/favicon.ico' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" >
+<body>
+	<!-- To the top -->
+		<button onclick="topFunction()" id="myBtn"><i style='font-size:18px' class="fa fa-arrow-up"></i></button>
+	<!-- Navigation bar on large screens -->
+	<div class="w3-top myNavbar w3-hide-small w3-hide-medium">
+		<div class="w3-bar" id="myNavbar">
+			<img class="padding_left w3-left" src="{% static 'image/ico.png' %}" style="width:32%" ></img>
+				<div class="padding_top">
+					<a href="" class="active w3-bar-item">HOME</a>
+					<a href="{% url 'booklist' %}" class="w3-bar-item">BOOK</a>
+					<a href="{% url 'rest_client' %}" class="w3-bar-item">MY LIBRARY</a>
+					<a href="#contact" class="w3-bar-item">CONTACT US</a>
+					{% if user.is_authenticated %}
+						<div id="myBorder1">
+							<a href="" class="w3-right">
+							<i class="myIcon fa fa-sign-out" style="font-size:16px"></i></a>
+					</div>
+					{% else %}
+                    <div id="myBorder1">
+							<a href="" class="w3-right">
+							<i class="myIcon fa fa-sign-in" style="font-size:16px"></i></a>
+						<div id="myBorder2">
+							<a href="" class="w3-right">
+							<i class="myIcon fa fa-user-plus" style="font-size:16px"></i></a>
+						</div>
+					</div>
+                    {% endif %}
+				</div>
+		</div>
+	</div>
+	<!-- Navigation bar on medium and small screens -->
+	<div class="w3-top myNavbar w3-bar w3-card w3-hide-large">
+		<a class="w3-bar-item w3-button w3-hover-black w3-hide-large w3-center-left" href="javascript:void(0);" onclick="toggleFunction()">
+		<i class="fa fa-bars"></i></a>
+		<img src="" style="width:80px" ></img>
+		{% if user.is_authenticated %}
+		<a href="" class="w3-bar-item w3-right w3-hide-large"><i class="fa fa-sign-out" style="font-size:20px"></i></a>
+		{% else %}
+		<a href="" class="w3-bar-item w3-right w3-hide-large"><i class="fa fa-sign-in" style="font-size:20px"></i></a>
+		<a href="" class="w3-bar-item w3-right w3-hide-large"><i class="fa fa-user-plus" style="font-size:16px"></i></a>
+		{% endif %}
+	</div>
+	<div id="nav" class="w3-card w3-bar-block w3-hide w3-hide-large ">
+	    <a href="" class="w3-bar-item">HOME</a>
+		<a href="" class="w3-bar-item">BOOK</a>
+			<a href="" class="w3-bar-item">MY LIBRARY</a>
+		<a href="#contact" class="w3-bar-item">CONTACT US</a>
+	</div>
+	<!-- Main image -->
+		<img class="w3-image w3-hide-medium w3-hide-small" src="{% static 'image/1.jpg' %}"  width="100%" height="550"></img>
+	<!-- Main image on small screen-->
+		<img class="display_small1 w3-hide-large" src="{% static 'image/1_small.jpg' %}"  width="100%"></img>
+	<!-- Container with text on small screens -->
+		<div class="w3-display-middle w3-hide-large" >
+			<div class="w3-animate-bottom">
+			<h1>"TODAY A READER, TOMORROW A LEADER"</h1>
+			<h4>MARGARET FULLER</h4>
+			<button onclick="location.href = '{% url 'booklist' %}';" class="myBtn1" >
+				<b>SEE BOOKS</b><span class="icon fa fa-angle-right"></span>
+			</button>
+			</div>
+			</div>
+	<!-- Container with text -->	
+    <div class="w3-display-left padding_left w3-hide-medium w3-hide-small" style="width:35%">
+		<div class="container_width  w3-padding-large  w3-animate-bottom">
+			<h1 class="container_top">"TODAY A READER, TOMORROW A LEADER"</h1>
+			<h4>MARGARET FULLER</h4>
+			<p style="color:white" class="padding_top">
+			<button onclick="location.href = '{% url 'booklist' %}';" id="myBtn1_padding" class="myBtn1 w3-hide-medium w3-hide-small">
+				<b>SEE BOOKS</b><span class="icon fa fa-angle-right" style='color: white'></span>
+			</button>
+		<div class="container_bottom"></div>
+			</p>
+		</div>
+    </div>
+<!-- Section - read book on large screnn-->
+	<div class="w3-content w3-padding-64 w3-hide-small">
+		<h3 class="w3-center">READ BOOKS</h3>
+			<div class="w3-row w3-center margin">
+				<div class="w3-col s3 m3 l3">
+					<div class="container">
+						<img src="{% static 'image/book1.png' %}" class="image" style="width:150px; height:220px" alt="The Peter Rabbit">
+							<div class="middle ">
+								<button onclick="location.href = '';" class="myBtn1">View</button>
+							</div>
+						<p>The Peter Rabbit</p>
+					</div>
+				</div>
+				<div class="w3-col s3 m3 l3">
+					<div class="container">
+						<img src="{% static 'image/book2.png' %}" class="image" style="width:150px; height:220px" alt="C.Dickens Major Works">
+							<div class="middle ">
+								<button onclick="location.href = '';" class="myBtn1">View</button>
+							</div>
+						<p>C.Dickens Major Works</p>
+					</div>
+				</div>
+				<div class="w3-col s3 m3 l3">
+					<div class="container">
+						<img src="{% static 'image/book3.png' %}" class="image" style="width:150px; height:220px" alt="Nancy Drew Starter Set">
+							<div class="middle ">
+								<button onclick="location.href = '';" class="myBtn1">View</button>
+							</div>
+						<p>Nancy Drew Starter Set</p>
+					</div>
+				</div>
+				<div class="w3-col s3 m3 l3">
+					<div class="container">
+						<img src="{% static 'image/book4.png' %}" class="image" style="width:150px; height:220px" alt="Nancy Drew Starter Set">
+							<div class="middle ">
+								<button onclick="location.href = '';" class="myBtn1">View</button>
+							</div>
+						<p>The Bungalow Mystery</p>
+					</div>
+				</div>
+		</div>
+	</div>
+	<!-- Section - scrolling image -->
+	<div>
+		<section class="image_scrolling margin w3-hide-medium w3-hide-small">
+	</div>
+	<div>
+		<section class="image_scrolling_small margin w3-hide-large">
+	</div>
+	<!-- Container with image and quotes -->
+	<div class="margin">
+		<div class="container_quotes">
+			<div class="mySlides">
+				<img  class="w3-hide-medium w3-hide-small" src="{% static 'image/image1.jpg' %}" width="745" height="390"></img>
+				<img  class="w3-hide-large " src="{% static 'image/image1.jpg' %}" width="100%" height="250"></img>
+					<div class="w3-display-right w3-hide-medium w3-hide-small" style="width:51%" >
+						<div class="padding_quotes">
+							<h1 style="color:white">What Writers Say</h1>
+							<h3 style="color:white">Books are great entertainment: no commercials, no batteries - hours of enjoyment.</h3>
+							<p class="bottom color_text">STEPHEN KING</p>
+						</div>
+					</div>
+				<div class="container_dot w3-display-bottomright">01<span class="size">/ 03</span></div>
+			</div>
+			<div class="mySlides">
+				<img class="w3-hide-medium w3-hide-small" src="{% static 'image/image2.jpg' %}"  width="745" height="390"></img>
+				<img  class="w3-hide-large " src="{% static 'image/image2.jpg' %}" width="100%" height="250"></img>
+					<div class="w3-display-right w3-hide-medium w3-hide-small" style="width:51%">
+						<div class="padding_quotes">
+							<h1 style="color:white">What Writers Say</h1>
+							<h3 style="color:white">A reader lives a thousand lives before he dies. The man who never reads lives only one.</h3>
+							<p class="bottom color_text">GEORGE R.R. MARTIN</p>
+						</div>
+					</div>
+				<div class="container_dot w3-display-bottomright">02<span class="size">/ 03</span></div>
+			</div>
+			<div class="mySlides">
+				<img class="w3-hide-medium w3-hide-small" src="{% static 'image/image3.jpg' %}"  width="745" height="390"></img>
+				<img  class="w3-hide-large " src="{% static 'image/image3.jpg' %}" width="100%" height="250"></img>
+					<div class="w3-display-right w3-hide-medium w3-hide-small" style="width:51%">
+						<div class="padding_quotes">
+							<h1 style="color:white">What Writers Say</h1>
+							<h3 style="color:white">I have always imagined that paradise will be a kind of library with a lot of great books.</h3>
+							<p class="bottom color_text"> JORGE LUIS BORGES</p>
+						</div>
+					</div>
+				<div class="container_dot w3-display-bottomright">03<span class="size">/ 03</span></div>
+			</div>
+		</div>
+	</div>
+	<!-- Dot -->
+	<div style="text-align:center" class="bottom margin">
+		<span class="dot"></span> 
+		<span class="dot"></span> 
+		<span class="dot"></span> 
+	</div>
+	<!-- Footer -->
+	<footer id="footer">
+		<div id="contact" >
+			<div class="w3-content w3-hide-medium w3-hide-small">
+				<div class="w3-row margin">
+					<div class="w3-col l3">
+						<div class="container">
+							<div>
+									<a href=""><h6>HOME</h6></a>
+							</div>
+						<div>
+							<a href=""><h6>BOOK</h6></a>
+						</div>
+						<div>
+							<a href=""><h6>MY LIBRARY</h6></a>
+						</div>
+					</div>
+				</div>
+				<div class="w3-col l3">
+					<div class="container">
+						<p>+380962770798</p>
+						<p>Consultation</p>
+					</div>
+				</div>
+				<div class="w3-col l3">
+					<div class="container">
+						<p>Book@gmail.com</p>
+						<p>E-Mail</p>
+					</div>
+				</div>
+				<div class="w3-col l3">
+					<div class="container">
+						<p>Privacy policy</p>
+						<p>© SpaceBook</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="w3-content w3-center w3-hide-large">
+			<div class="w3-row margin">
+				<div class="w3-col l3">
+					<div class="container">
+						<p>+380962770798</p>
+						<p>Consultation</p>
+						<div class="line"></div>
+					</div>
+				</div>
+				<div class="w3-col l3">
+					<div class="container">
+						<p>Book@gmail.com</p>
+						<p>E-Mail</p>
+						<div class="line"></div>
+					</div>
+				</div>
+				<div class="w3-col l3">
+					<div class="container">
+						<p>Privacy policy</p>
+						<p>© SpaceBook</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+<script src="{% static 'Script/Script.js' %}"></script>
+</body>
+</html>
